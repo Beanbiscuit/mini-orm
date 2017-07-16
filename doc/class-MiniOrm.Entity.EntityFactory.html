@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class MiniOrm\Entity\EntityFactory</title>
+
+	<link rel="stylesheet" href="resources/style.css?95ada9fb523b6ab4fd1c47bb375f713f2cc65542">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li class="active">
+					<a href="namespace-MiniOrm.html">
+						MiniOrm<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-MiniOrm.Driver.html">
+						Driver					</a>
+
+						</li>
+				<li class="active">
+					<a href="namespace-MiniOrm.Entity.html">
+						Entity					</a>
+
+						</li>
+				<li>
+					<a href="namespace-MiniOrm.Logging.html">
+						Logging					</a>
+
+						</li>
+				<li>
+					<a href="namespace-MiniOrm.Mapping.html">
+						Mapping					</a>
+
+						</li>
+				<li>
+					<a href="namespace-MiniOrm.Prepare.html">
+						Prepare					</a>
+
+						</li>
+				<li>
+					<a href="namespace-MiniOrm.Query.html">
+						Query					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-MiniOrm.Entity.EntityFactory.html">EntityFactory</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-MiniOrm.Entity.html" title="Summary of MiniOrm\Entity"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class EntityFactory</h1>
+
+
+	<div class="description">
+	<p>Static factory class for instantiatying entities based on mappings and values returned from the
+data layer</p>
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		<b>Final</b><br>
+		
+		<b>Namespace:</b> <a href="namespace-MiniOrm.html">MiniOrm</a>\<a href="namespace-MiniOrm.Entity.html">Entity</a><br>
+		
+
+				<b>Author:</b>
+				Bruce Silver <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#98;&#x72;&#117;&#99;&#x65;&#46;&#115;&#x69;&#108;v&#x65;&#114;&#x40;&#x74;&#97;&#x6e;&#x64;&#102;&#x2e;&#99;&#111;&#x2e;&#117;&#107;">&#98;&#x72;&#117;&#99;&#x65;&#46;&#115;&#x69;&#108;v&#x65;&#114;&#x40;&#x74;&#97;&#x6e;&#x64;&#102;&#x2e;&#99;&#111;&#x2e;&#117;&#107;</a><br>
+			<b>Located at</b> <a href="source-class-MiniOrm.Entity.EntityFactory.html#7-85" title="Go to source code">Entity/EntityFactory.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="newInstance" id="_newInstance">
+
+		<td class="attributes"><code>
+			 public static
+
+			object
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_newInstance">#</a>
+		<code><a href="source-class-MiniOrm.Entity.EntityFactory.html#26-47" title="Go to source code">newInstance</a>( <span>string <var>$sClassName</var></span>, <span>array <var>$aEntityMap</var></span>, <span> <var>$aMapping</var></span> )</code>
+
+		<div class="description short">
+			<p>Innstantiates a managed entity given its name, a hashtable of attribute names and
+associated values and also the mapping data for the entity.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Innstantiates a managed entity given its name, a hashtable of attribute names and
+associated values and also the mapping data for the entity.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sClassName</var></dt>
+					<dd><ul>
+<li>The full class name including the namespace.</li>
+</ul></dd>
+					<dt><var>$aEntityMap</var></dt>
+					<dd><ul>
+<li>A hashtable of attribute names and associated values.  Used to construct the entity.</li>
+</ul></dd>
+					<dt><var>$aMapping</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					object<br><ul>
+<li>A POPO that is declared as an ORM entity.</li>
+</ul>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="buildEntity" id="_buildEntity">
+
+		<td class="attributes"><code>
+			 protected static
+
+			object
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_buildEntity">#</a>
+		<code><a href="source-class-MiniOrm.Entity.EntityFactory.html#49-83" title="Go to source code">buildEntity</a>( <span>string <var>$sClassName</var></span>, <span>array <var>$aEntityMap</var></span>, <span> <var>$aMapping</var></span> )</code>
+
+		<div class="description short">
+			<p>Instantiates an entity given the entity name, values returned from the table row that the entity
+will encapsulate and the ORM mapping data which links the entites attributes and the associated
+database table columns.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Instantiates an entity given the entity name, values returned from the table row that the entity
+will encapsulate and the ORM mapping data which links the entites attributes and the associated
+database table columns.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sClassName</var></dt>
+					<dd></dd>
+					<dt><var>$aEntityMap</var></dt>
+					<dd></dd>
+					<dt><var>$aMapping</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					object<br><ul>
+<li>A POPO that is declared as an ORM entity.</li>
+</ul>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

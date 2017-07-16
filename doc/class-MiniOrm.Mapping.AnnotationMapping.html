@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class MiniOrm\Mapping\AnnotationMapping</title>
+
+	<link rel="stylesheet" href="resources/style.css?95ada9fb523b6ab4fd1c47bb375f713f2cc65542">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li class="active">
+					<a href="namespace-MiniOrm.html">
+						MiniOrm<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-MiniOrm.Driver.html">
+						Driver					</a>
+
+						</li>
+				<li>
+					<a href="namespace-MiniOrm.Entity.html">
+						Entity					</a>
+
+						</li>
+				<li>
+					<a href="namespace-MiniOrm.Logging.html">
+						Logging					</a>
+
+						</li>
+				<li class="active">
+					<a href="namespace-MiniOrm.Mapping.html">
+						Mapping					</a>
+
+						</li>
+				<li>
+					<a href="namespace-MiniOrm.Prepare.html">
+						Prepare					</a>
+
+						</li>
+				<li>
+					<a href="namespace-MiniOrm.Query.html">
+						Query					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-MiniOrm.Mapping.AnnotationMapping.html">AnnotationMapping</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-MiniOrm.Mapping.EntityMapping.html">EntityMapping</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-MiniOrm.Mapping.MappingException.html">MappingException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-MiniOrm.Mapping.html" title="Summary of MiniOrm\Mapping"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class AnnotationMapping</h1>
+
+
+	<div class="description">
+	<p>This class maps an entity to the associated database table by reading annotations placed in the class
+and property doc blocks.</p>
+
+<p>Mini ORM annotations use the annotations defined by the Java Persistence API however only limited
+attributes for the various annotations are implemented by mini ORM.</p>
+
+<p>Replace the @ with @ORM\ for each annotation in order to provide compatabilty with the Doctrine ORM.</p>
+
+<p>Annotations for columns must be added to class attributes.
+All annotation attribute values must be enclosed by single commas.
+Each annotation must be declared on a new line in the doc block.  Do not place multiple annotations
+on the same line.</p>
+
+<p>Add @Entity to the top of every entity.
+Add @Table(table_name='db_table_name')</p>
+
+<p>Mini ORM only supports auto incrementing primary keys of numeric type e.g. INTEGER, BIGINT etc.</p>
+
+<p>Add @Id(name='db_table_column_name', type="some type") to a class property to map it to the database
+table primary key column.</p>
+
+<p>A custom attribute is used by the package for the @Column annotation and is called type.
+Use the name of a php primitive or the class name of an associated entity as the value.</p>
+
+<p>Map attriubtes to columns by adding.</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b><span>MiniOrm\Mapping\AnnotationMapping</span></b>			
+			 implements 
+				<a href="class-MiniOrm.Mapping.EntityMapping.html"><span>MiniOrm\Mapping\EntityMapping</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-MiniOrm.html">MiniOrm</a>\<a href="namespace-MiniOrm.Mapping.html">Mapping</a><br>
+		
+
+				<b>Author:</b>
+				Bruce Silver <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#98;&#x72;&#117;&#99;&#x65;&#46;&#115;&#x69;&#108;v&#x65;&#114;&#x40;&#x74;&#97;&#x6e;&#x64;&#102;&#x2e;&#99;&#111;&#x2e;&#117;&#107;">&#98;&#x72;&#117;&#99;&#x65;&#46;&#115;&#x69;&#108;v&#x65;&#114;&#x40;&#x74;&#97;&#x6e;&#x64;&#102;&#x2e;&#99;&#111;&#x2e;&#117;&#107;</a><br>
+				<b>Column(name='db_table_column_name',:</b>
+				type="int") - maps to column types BIGINT, SMALLINT etc<br>
+				<b>Column(name='db_table_column_name',:</b>
+				type="string") - maps to column types CHAR, VARCHAR<br>
+				<b>Column(name='db_table_column_name',:</b>
+				<p>type="bool") - maps to column type TINYINT etc</p>
+
+<p>Class properties not marked with the @Column annotation are ignored.
+Class methods uses the PHP Reflection API to read annotations.</p>
+
+<p>Class methods are marked as protected so a custom implementation of this case can be created by extending
+this class.</p><br>
+			<b>Located at</b> <a href="source-class-MiniOrm.Mapping.AnnotationMapping.html#7-399" title="Go to source code">Mapping/AnnotationMapping.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="mapEntity" id="_mapEntity">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_mapEntity">#</a>
+		<code><a href="source-class-MiniOrm.Mapping.AnnotationMapping.html#102-136" title="Go to source code">mapEntity</a>( <span>string <var>$sEntityName</var></span> )</code>
+
+		<div class="description short">
+			<p>Maps the provided entity to a database table.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Maps the provided entity to a database table.</p>
+
+<p>Maps an entities class attributes to the related database table columns.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sEntityName</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-MiniOrm.Mapping.MappingException.html">MiniOrm\Mapping\MappingException</a></code>
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-MiniOrm.Mapping.EntityMapping.html#_mapEntity">MiniOrm\Mapping\EntityMapping::mapEntity()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMappingForEntity" id="_getMappingForEntity">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMappingForEntity">#</a>
+		<code><a href="source-class-MiniOrm.Mapping.AnnotationMapping.html#138-157" title="Go to source code">getMappingForEntity</a>( <span>object <var>$oEntity</var></span> )</code>
+
+		<div class="description short">
+			<p>Pass the an entity to this method to return mapping data for the entity.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Pass the an entity to this method to return mapping data for the entity.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$oEntity</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-MiniOrm.Mapping.MappingException.html">MiniOrm\Mapping\MappingException</a></code>
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-MiniOrm.Mapping.EntityMapping.html#_getMappingForEntity">MiniOrm\Mapping\EntityMapping::getMappingForEntity()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMappingForEntityName" id="_getMappingForEntityName">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMappingForEntityName">#</a>
+		<code><a href="source-class-MiniOrm.Mapping.AnnotationMapping.html#159-173" title="Go to source code">getMappingForEntityName</a>( <span>string <var>$sEntity</var></span> )</code>
+
+		<div class="description short">
+			<p>Pass the class name of an entity to this method to return mapping data for the entity.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Pass the class name of an entity to this method to return mapping data for the entity.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sEntity</var></dt>
+					<dd><ul>
+<li>The class name of the ORM entity including namespace.</li>
+</ul></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br><ul>
+<li>The mapping array for the provided entity</li>
+</ul>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-MiniOrm.Mapping.MappingException.html">MiniOrm\Mapping\MappingException</a></code>
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-MiniOrm.Mapping.EntityMapping.html#_getMappingForEntityName">MiniOrm\Mapping\EntityMapping::getMappingForEntityName()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAllMappings" id="_getAllMappings">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAllMappings">#</a>
+		<code><a href="source-class-MiniOrm.Mapping.AnnotationMapping.html#175-184" title="Go to source code">getAllMappings</a>( )</code>
+
+		<div class="description short">
+			<p>Returns the mapping array.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the mapping array.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-MiniOrm.Mapping.EntityMapping.html#_getAllMappings">MiniOrm\Mapping\EntityMapping::getAllMappings()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="mapProperties" id="_mapProperties">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_mapProperties">#</a>
+		<code><a href="source-class-MiniOrm.Mapping.AnnotationMapping.html#186-212" title="Go to source code">mapProperties</a>( <span>object <var>$sClassName</var></span>, <span>string <var>$aProperties</var></span>, <span>array <var>$aProperties</var>,…</span> )</code>
+
+		<div class="description short">
+			<p>Loop over each class property and scans for ORM annotations.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Loop over each class property and scans for ORM annotations.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sClassName</var></dt>
+					<dd>$oEntity</dd>
+					<dt><var>$aProperties</var></dt>
+					<dd>full class name of the entity whose proerties are to be mapped.</dd>
+					<dt><var>$aProperties</var>,…</dt>
+					<dd><ul>
+<li>An array of Property objects.</li>
+</ul></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="tagExists" id="_tagExists">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_tagExists">#</a>
+		<code><a href="source-class-MiniOrm.Mapping.AnnotationMapping.html#214-226" title="Go to source code">tagExists</a>( <span>string <var>$sDocBlock</var></span>, <span>string <var>$sTag</var></span> )</code>
+
+		<div class="description short">
+			<p>Checks if a provided tag exists within a provided doc block.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Checks if a provided tag exists within a provided doc block.</p>
+
+<p>Method is marked as protected so this class can be extended.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sDocBlock</var></dt>
+					<dd></dd>
+					<dt><var>$sTag</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isEntity" id="_isEntity">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isEntity">#</a>
+		<code><a href="source-class-MiniOrm.Mapping.AnnotationMapping.html#228-239" title="Go to source code">isEntity</a>( <span>string <var>$sDocBlock</var></span> )</code>
+
+		<div class="description short">
+			<p>Method checks to see if the passed documentation string contains the @Entity annotation.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Method checks to see if the passed documentation string contains the @Entity annotation.</p>
+
+<p>Returns true denoting that the passed object is marked as an ORM entity.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sDocBlock</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="parsePrimaryKeyTag" id="_parsePrimaryKeyTag">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_parsePrimaryKeyTag">#</a>
+		<code><a href="source-class-MiniOrm.Mapping.AnnotationMapping.html#241-262" title="Go to source code">parsePrimaryKeyTag</a>( <span>ReflectionProperty <var>$oProperty</var></span>, <span>string <var>$sClassName</var></span> )</code>
+
+		<div class="description short">
+			<p>Parses the promary key annotation for the provided entity and extracts annotation attributes.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Parses the promary key annotation for the provided entity and extracts annotation attributes.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$oProperty</var></dt>
+					<dd></dd>
+					<dt><var>$sClassName</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="parseTableTag" id="_parseTableTag">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_parseTableTag">#</a>
+		<code><a href="source-class-MiniOrm.Mapping.AnnotationMapping.html#264-293" title="Go to source code">parseTableTag</a>( <span>string <var>$sClassName</var></span>, <span>string <var>$sDocBlock</var></span> )</code>
+
+		<div class="description short">
+			<p>Grab the name of the database table from the @Table tag that is to be mapped to a provided entity.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Grab the name of the database table from the @Table tag that is to be mapped to a provided entity.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sClassName</var></dt>
+					<dd><ul>
+<li>The class name of the entity that is to be mapped including namespace.</li>
+</ul></dd>
+					<dt><var>$sDocBlock</var></dt>
+					<dd><ul>
+<li>The class documentation block string.</li>
+</ul></dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-MiniOrm.Mapping.MappingException.html">MiniOrm\Mapping\MappingException</a></code>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="parseColumnTag" id="_parseColumnTag">
+
+		<td class="attributes"><code>
+			 protected 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_parseColumnTag">#</a>
+		<code><a href="source-class-MiniOrm.Mapping.AnnotationMapping.html#295-322" title="Go to source code">parseColumnTag</a>( <span>ReflectionProperty <var>$oProperty</var></span> )</code>
+
+		<div class="description short">
+			<p>Parses values from a @Column tag attributes and adds them to an array.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Parses values from a @Column tag attributes and adds them to an array.</p>
+
+<p>The array will be used by PDO to determine the database column type.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$oProperty</var></dt>
+					<dd><ul>
+<li>A PHP class Property object from the REflection API.</li>
+</ul></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br><ul>
+<li>An array of ORM attributes derived from a @Column annotation.</li>
+</ul>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="parseTagAttributes" id="_parseTagAttributes">
+
+		<td class="attributes"><code>
+			 protected 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_parseTagAttributes">#</a>
+		<code><a href="source-class-MiniOrm.Mapping.AnnotationMapping.html#324-354" title="Go to source code">parseTagAttributes</a>( <span>array <var>$aMap</var></span>, <span>string <var>$sTagAttributes</var></span> )</code>
+
+		<div class="description short">
+			<p>Grab attributes and pass into an array as key value pairs from the provided tag attributes string.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Grab attributes and pass into an array as key value pairs from the provided tag attributes string.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$aMap</var></dt>
+					<dd></dd>
+					<dt><var>$sTagAttributes</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getTag" id="_getTag">
+
+		<td class="attributes"><code>
+			 protected 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getTag">#</a>
+		<code><a href="source-class-MiniOrm.Mapping.AnnotationMapping.html#356-397" title="Go to source code">getTag</a>( <span>string <var>$sTagName</var></span>, <span>string <var>$sDocBlock</var></span> )</code>
+
+		<div class="description short">
+			<p>Strips the required tag from the provided docblock string.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Strips the required tag from the provided docblock string.</p>
+
+<p>The method uses the passed tag to denote the start of the ORM annotation.
+The method uses the * char to denote the end of the ORM annotation.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sTagName</var></dt>
+					<dd></dd>
+					<dt><var>$sDocBlock</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-MiniOrm.Mapping.MappingException.html">MiniOrm\Mapping\MappingException</a></code>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary constants" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="TAG_PRIMARY_KEY" id="TAG_PRIMARY_KEY">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-MiniOrm.Mapping.AnnotationMapping.html#57-60" title="Go to source code"><b>TAG_PRIMARY_KEY</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#TAG_PRIMARY_KEY" class="anchor">#</a>
+				<code><span class="php-quote">'@Id'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="TAG_ENITIY" id="TAG_ENITIY">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-MiniOrm.Mapping.AnnotationMapping.html#62-65" title="Go to source code"><b>TAG_ENITIY</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#TAG_ENITIY" class="anchor">#</a>
+				<code><span class="php-quote">'@Entity'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="TAG_COLUMN" id="TAG_COLUMN">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-MiniOrm.Mapping.AnnotationMapping.html#67-70" title="Go to source code"><b>TAG_COLUMN</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#TAG_COLUMN" class="anchor">#</a>
+				<code><span class="php-quote">'@Column'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="TAG_JOIN_COLUMN" id="TAG_JOIN_COLUMN">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-MiniOrm.Mapping.AnnotationMapping.html#72-75" title="Go to source code"><b>TAG_JOIN_COLUMN</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#TAG_JOIN_COLUMN" class="anchor">#</a>
+				<code><span class="php-quote">'@JoinColumn'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="TAG_TABLE" id="TAG_TABLE">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-MiniOrm.Mapping.AnnotationMapping.html#77-80" title="Go to source code"><b>TAG_TABLE</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#TAG_TABLE" class="anchor">#</a>
+				<code><span class="php-quote">'@Table'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="TAG_ONE_TO_ONE" id="TAG_ONE_TO_ONE">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-MiniOrm.Mapping.AnnotationMapping.html#82-85" title="Go to source code"><b>TAG_ONE_TO_ONE</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#TAG_ONE_TO_ONE" class="anchor">#</a>
+				<code><span class="php-quote">'@OneToOne'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="TAG_MANY_TO_ONE" id="TAG_MANY_TO_ONE">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-MiniOrm.Mapping.AnnotationMapping.html#87-90" title="Go to source code"><b>TAG_MANY_TO_ONE</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#TAG_MANY_TO_ONE" class="anchor">#</a>
+				<code><span class="php-quote">'@ManyToOne'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="TAG_MANY_TO_MANY" id="TAG_MANY_TO_MANY">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-MiniOrm.Mapping.AnnotationMapping.html#92-95" title="Go to source code"><b>TAG_MANY_TO_MANY</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#TAG_MANY_TO_MANY" class="anchor">#</a>
+				<code><span class="php-quote">'@ManyToMany'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="TAG_ONE_TO_MANY" id="TAG_ONE_TO_MANY">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-MiniOrm.Mapping.AnnotationMapping.html#97-100" title="Go to source code"><b>TAG_ONE_TO_MANY</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#TAG_ONE_TO_MANY" class="anchor">#</a>
+				<code><span class="php-quote">'@OneToMany'</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-MiniOrm.Mapping.EntityMapping.html#constants">MiniOrm\Mapping\EntityMapping</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-MiniOrm.Mapping.EntityMapping.html#ATTR_LENGTH"><b>ATTR_LENGTH</b></a>, 
+			<a href="class-MiniOrm.Mapping.EntityMapping.html#ATTR_NAME"><b>ATTR_NAME</b></a>, 
+			<a href="class-MiniOrm.Mapping.EntityMapping.html#ATTR_PROPERTY"><b>ATTR_PROPERTY</b></a>, 
+			<a href="class-MiniOrm.Mapping.EntityMapping.html#ATTR_TYPE"><b>ATTR_TYPE</b></a>, 
+			<a href="class-MiniOrm.Mapping.EntityMapping.html#KEY_ASSOCIATIONS"><b>KEY_ASSOCIATIONS</b></a>, 
+			<a href="class-MiniOrm.Mapping.EntityMapping.html#KEY_COLUMNS"><b>KEY_COLUMNS</b></a>, 
+			<a href="class-MiniOrm.Mapping.EntityMapping.html#KEY_MANY_TO_MANY"><b>KEY_MANY_TO_MANY</b></a>, 
+			<a href="class-MiniOrm.Mapping.EntityMapping.html#KEY_MANY_TO_ONE"><b>KEY_MANY_TO_ONE</b></a>, 
+			<a href="class-MiniOrm.Mapping.EntityMapping.html#KEY_ONE_TO_MANYD"><b>KEY_ONE_TO_MANYD</b></a>, 
+			<a href="class-MiniOrm.Mapping.EntityMapping.html#KEY_ONE_TO_ONE"><b>KEY_ONE_TO_ONE</b></a>, 
+			<a href="class-MiniOrm.Mapping.EntityMapping.html#KEY_PRIMARY_ID"><b>KEY_PRIMARY_ID</b></a>, 
+			<a href="class-MiniOrm.Mapping.EntityMapping.html#KEY_TABLE"><b>KEY_TABLE</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

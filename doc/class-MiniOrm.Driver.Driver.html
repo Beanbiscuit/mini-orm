@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Interface MiniOrm\Driver\Driver</title>
+
+	<link rel="stylesheet" href="resources/style.css?95ada9fb523b6ab4fd1c47bb375f713f2cc65542">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li class="active">
+					<a href="namespace-MiniOrm.html">
+						MiniOrm<span></span>
+					</a>
+
+						<ul>
+				<li class="active">
+					<a href="namespace-MiniOrm.Driver.html">
+						Driver					</a>
+
+						</li>
+				<li>
+					<a href="namespace-MiniOrm.Entity.html">
+						Entity					</a>
+
+						</li>
+				<li>
+					<a href="namespace-MiniOrm.Logging.html">
+						Logging					</a>
+
+						</li>
+				<li>
+					<a href="namespace-MiniOrm.Mapping.html">
+						Mapping					</a>
+
+						</li>
+				<li>
+					<a href="namespace-MiniOrm.Prepare.html">
+						Prepare					</a>
+
+						</li>
+				<li>
+					<a href="namespace-MiniOrm.Query.html">
+						Query					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-MiniOrm.Driver.MySql.html">MySql</a></li>
+				<li><a href="class-MiniOrm.Driver.Sqlite.html">Sqlite</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li class="active"><a href="class-MiniOrm.Driver.Driver.html">Driver</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-MiniOrm.Driver.html" title="Summary of MiniOrm\Driver"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Interface Driver</h1>
+
+
+	<div class="description">
+	<p>Interface for database drivers that are available in the mini orm package.</p>
+	</div>
+
+
+
+
+
+	<div>
+		<h4>Direct known implementers</h4>
+			<a href="class-MiniOrm.Driver.MySql.html">MiniOrm\Driver\MySql</a>, 
+			<a href="class-MiniOrm.Driver.Sqlite.html">MiniOrm\Driver\Sqlite</a>
+	</div>
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-MiniOrm.html">MiniOrm</a>\<a href="namespace-MiniOrm.Driver.html">Driver</a><br>
+		
+
+				<b>Author:</b>
+				Bruce Silver <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#98;&#x72;&#117;&#99;&#x65;&#46;&#115;&#x69;&#108;v&#x65;&#114;&#x40;&#x74;&#97;&#x6e;&#x64;&#102;&#x2e;&#99;&#111;&#x2e;&#117;&#107;">&#98;&#x72;&#117;&#99;&#x65;&#46;&#115;&#x69;&#108;v&#x65;&#114;&#x40;&#x74;&#97;&#x6e;&#x64;&#102;&#x2e;&#99;&#111;&#x2e;&#117;&#107;</a><br>
+			<b>Located at</b> <a href="source-class-MiniOrm.Driver.Driver.html#7-46" title="Go to source code">Driver/Driver.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="getConnection" id="_getConnection">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getConnection">#</a>
+		<code><a href="source-class-MiniOrm.Driver.Driver.html#15-21" title="Go to source code">getConnection</a>( <span><code><a href="class-MiniOrm.Configuration.html">MiniOrm\Configuration</a></code> <var>$oConfig</var></span> )</code>
+
+		<div class="description short">
+			<p>Returns the connection string that is to be passed when instantiating the PDO object.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the connection string that is to be passed when instantiating the PDO object.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$oConfig</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDataAccessObject" id="_getDataAccessObject">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDataAccessObject">#</a>
+		<code><a href="source-class-MiniOrm.Driver.Driver.html#23-29" title="Go to source code">getDataAccessObject</a>( <span><code><a href="class-MiniOrm.Configuration.html">MiniOrm\Configuration</a></code> <var>$oConfig</var></span> )</code>
+
+		<div class="description short">
+			<p>Returns an instance of the PHP data object configured using the settings in the configuration file.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns an instance of the PHP data object configured using the settings in the configuration file.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$oConfig</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-MiniOrm.DbalException.html">MiniOrm\DbalException</a></code>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="convertDateTime" id="_convertDateTime">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_convertDateTime">#</a>
+		<code><a href="source-class-MiniOrm.Driver.Driver.html#31-36" title="Go to source code">convertDateTime</a>( <span>DateTime <var>$oDateTime</var></span> )</code>
+
+		<div class="description short">
+			<p>Converts a PHP date time object into a database specific date time format for the implementing driver.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Converts a PHP date time object into a database specific date time format for the implementing driver.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$oDateTime</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="filter" id="_filter">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_filter">#</a>
+		<code><a href="source-class-MiniOrm.Driver.Driver.html#38-45" title="Go to source code">filter</a>( <span>string <var>$mValue</var></span> )</code>
+
+		<div class="description short">
+			<p>Filter the provided string for inclustion in SQL statements.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Filter the provided string for inclustion in SQL statements.</p>
+
+<p>The method allows database specific filtering to be performed on the provided string.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$mValue</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

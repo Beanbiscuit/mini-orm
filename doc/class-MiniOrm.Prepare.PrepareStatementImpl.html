@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class MiniOrm\Prepare\PrepareStatementImpl</title>
+
+	<link rel="stylesheet" href="resources/style.css?95ada9fb523b6ab4fd1c47bb375f713f2cc65542">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li class="active">
+					<a href="namespace-MiniOrm.html">
+						MiniOrm<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-MiniOrm.Driver.html">
+						Driver					</a>
+
+						</li>
+				<li>
+					<a href="namespace-MiniOrm.Entity.html">
+						Entity					</a>
+
+						</li>
+				<li>
+					<a href="namespace-MiniOrm.Logging.html">
+						Logging					</a>
+
+						</li>
+				<li>
+					<a href="namespace-MiniOrm.Mapping.html">
+						Mapping					</a>
+
+						</li>
+				<li class="active">
+					<a href="namespace-MiniOrm.Prepare.html">
+						Prepare					</a>
+
+						</li>
+				<li>
+					<a href="namespace-MiniOrm.Query.html">
+						Query					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-MiniOrm.Prepare.PrepareStatementImpl.html">PrepareStatementImpl</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-MiniOrm.Prepare.PrepareStatement.html">PrepareStatement</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-MiniOrm.Prepare.PrepareException.html">PrepareException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-MiniOrm.Prepare.html" title="Summary of MiniOrm\Prepare"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class PrepareStatementImpl</h1>
+
+
+	<div class="description">
+	<p>This class uses data returned from entity mapping and prepares an insert statmeent
+from the mapping derived from the entity class properties.</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b><span>MiniOrm\Prepare\PrepareStatementImpl</span></b>			
+			 implements 
+				<a href="class-MiniOrm.Prepare.PrepareStatement.html"><span>MiniOrm\Prepare\PrepareStatement</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-MiniOrm.html">MiniOrm</a>\<a href="namespace-MiniOrm.Prepare.html">Prepare</a><br>
+		
+
+				<b>Author:</b>
+				Bruce Silver <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#98;&#x72;&#117;&#99;&#x65;&#46;&#115;&#x69;&#108;v&#x65;&#114;&#x40;&#x74;&#97;&#x6e;&#x64;&#102;&#x2e;&#99;&#111;&#x2e;&#117;&#107;">&#98;&#x72;&#117;&#99;&#x65;&#46;&#115;&#x69;&#108;v&#x65;&#114;&#x40;&#x74;&#97;&#x6e;&#x64;&#102;&#x2e;&#99;&#111;&#x2e;&#117;&#107;</a><br>
+			<b>Located at</b> <a href="source-class-MiniOrm.Prepare.PrepareStatementImpl.html#9-198" title="Go to source code">Prepare/PrepareStatementImpl.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="insert" id="_insert">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_insert">#</a>
+		<code><a href="source-class-MiniOrm.Prepare.PrepareStatementImpl.html#18-55" title="Go to source code">insert</a>( <span>string <var>$oEntity</var></span>, <span><code><a href="class-MiniOrm.Mapping.EntityMapping.html">MiniOrm\Mapping\EntityMapping</a></code> <var>$oMapping</var></span>, <span>PDO <var>$sPDO</var></span> )</code>
+
+		<div class="description short">
+			<p>Build an SQL insert statement using PDO for the given entity.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Build an SQL insert statement using PDO for the given entity.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$oEntity</var></dt>
+					<dd><ul>
+<li>The entity to persist.</li>
+</ul></dd>
+					<dt><var>$oMapping</var></dt>
+					<dd><ul>
+<li>Property to db column mappings for the entity.</li>
+</ul></dd>
+					<dt><var>$sPDO</var></dt>
+					<dd><ul>
+<li>The data access object.</li>
+</ul></dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-MiniOrm.Prepare.PrepareStatement.html#_insert">MiniOrm\Prepare\PrepareStatement::insert()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="delete" id="_delete">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_delete">#</a>
+		<code><a href="source-class-MiniOrm.Prepare.PrepareStatementImpl.html#57-82" title="Go to source code">delete</a>( <span>object <var>$oEntity</var></span>, <span><code><a href="class-MiniOrm.Mapping.EntityMapping.html">MiniOrm\Mapping\EntityMapping</a></code> <var>$oMapping</var></span>, <span>PDO <var>$sPDO</var></span> )</code>
+
+		<div class="description short">
+			<p>Builds am SQL delete statment for the given entity and mappings.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Builds am SQL delete statment for the given entity and mappings.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$oEntity</var></dt>
+					<dd></dd>
+					<dt><var>$oMapping</var></dt>
+					<dd></dd>
+					<dt><var>$sPDO</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-MiniOrm.Prepare.PrepareStatement.html#_delete">MiniOrm\Prepare\PrepareStatement::delete()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="bindParameters" id="_bindParameters">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_bindParameters">#</a>
+		<code><a href="source-class-MiniOrm.Prepare.PrepareStatementImpl.html#84-116" title="Go to source code">bindParameters</a>( <span>PDOStatement <var>$oStmt</var></span>, <span>array <var>$aColumns</var></span>, <span>object <var>$oEntity</var></span> )</code>
+
+		<div class="description short">
+			<p>Bind the parameters and values to a PDO statement.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Bind the parameters and values to a PDO statement.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$oStmt</var></dt>
+					<dd></dd>
+					<dt><var>$aColumns</var></dt>
+					<dd></dd>
+					<dt><var>$oEntity</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-MiniOrm.Prepare.PrepareException.html">MiniOrm\Prepare\PrepareException</a></code>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-MiniOrm.Prepare.PrepareStatement.html#constants">MiniOrm\Prepare\PrepareStatement</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-MiniOrm.Prepare.PrepareStatement.html#DELETE_STATEMENT"><b>DELETE_STATEMENT</b></a>, 
+			<a href="class-MiniOrm.Prepare.PrepareStatement.html#INSERT_STATEMENT"><b>INSERT_STATEMENT</b></a>, 
+			<a href="class-MiniOrm.Prepare.PrepareStatement.html#UPDATE_STATEMENT"><b>UPDATE_STATEMENT</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

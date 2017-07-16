@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class MiniOrm\UnitOfWork</title>
+
+	<link rel="stylesheet" href="resources/style.css?95ada9fb523b6ab4fd1c47bb375f713f2cc65542">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li class="active">
+					<a href="namespace-MiniOrm.html">
+						MiniOrm<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-MiniOrm.Driver.html">
+						Driver					</a>
+
+						</li>
+				<li>
+					<a href="namespace-MiniOrm.Entity.html">
+						Entity					</a>
+
+						</li>
+				<li>
+					<a href="namespace-MiniOrm.Logging.html">
+						Logging					</a>
+
+						</li>
+				<li>
+					<a href="namespace-MiniOrm.Mapping.html">
+						Mapping					</a>
+
+						</li>
+				<li>
+					<a href="namespace-MiniOrm.Prepare.html">
+						Prepare					</a>
+
+						</li>
+				<li>
+					<a href="namespace-MiniOrm.Query.html">
+						Query					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-MiniOrm.Configuration.html">Configuration</a></li>
+				<li><a href="class-MiniOrm.DbalManager.html">DbalManager</a></li>
+				<li><a href="class-MiniOrm.DriverFactory.html">DriverFactory</a></li>
+				<li><a href="class-MiniOrm.EntityManager.html">EntityManager</a></li>
+				<li><a href="class-MiniOrm.OrmManager.html">OrmManager</a></li>
+				<li class="active"><a href="class-MiniOrm.UnitOfWork.html">UnitOfWork</a></li>
+			</ul>
+
+
+			<h3>Traits</h3>
+			<ul>
+				<li><a href="class-MiniOrm.ObjectRegistry.html">ObjectRegistry</a></li>
+			</ul>
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-MiniOrm.DbalException.html">DbalException</a></li>
+				<li><a href="class-MiniOrm.OrmException.html">OrmException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-MiniOrm.html" title="Summary of MiniOrm"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class UnitOfWork</h1>
+
+
+	<div class="description">
+	<p>Unit of work for domain objects that are to be synced to a database.</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b><span>MiniOrm\UnitOfWork</span></b>			
+			 implements 
+<span>Countable</span>
+			
+			 uses 
+					<a href="class-MiniOrm.ObjectRegistry.html"><span>MiniOrm\ObjectRegistry</span></a>
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-MiniOrm.html">MiniOrm</a><br>
+		
+
+				<b>Author:</b>
+				Bruce Silver <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#98;&#x72;&#117;&#99;&#x65;&#46;&#115;&#x69;&#108;v&#x65;&#114;&#x40;&#x74;&#97;&#x6e;&#x64;&#102;&#x2e;&#99;&#111;&#x2e;&#117;&#107;">&#98;&#x72;&#117;&#99;&#x65;&#46;&#115;&#x69;&#108;v&#x65;&#114;&#x40;&#x74;&#97;&#x6e;&#x64;&#102;&#x2e;&#99;&#111;&#x2e;&#117;&#107;</a><br>
+			<b>Located at</b> <a href="source-class-MiniOrm.UnitOfWork.html#5-153" title="Go to source code">UnitOfWork.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="registerNew" id="_registerNew">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_registerNew">#</a>
+		<code><a href="source-class-MiniOrm.UnitOfWork.html#53-63" title="Go to source code">registerNew</a>( <span>object <var>$oEntity</var></span> )</code>
+
+		<div class="description short">
+			<p>Mark an entity for an insert.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Mark an entity for an insert.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$oEntity</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="registerDirty" id="_registerDirty">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_registerDirty">#</a>
+		<code><a href="source-class-MiniOrm.UnitOfWork.html#65-75" title="Go to source code">registerDirty</a>( <span>object <var>$oEntity</var></span> )</code>
+
+		<div class="description short">
+			<p>Mark an entity for an update.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Mark an entity for an update.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$oEntity</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="registerClean" id="_registerClean">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_registerClean">#</a>
+		<code><a href="source-class-MiniOrm.UnitOfWork.html#77-87" title="Go to source code">registerClean</a>( <span>object <var>$oEntity</var></span> )</code>
+
+		<div class="description short">
+			<p>Mark an entity as unchanged and clean.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Mark an entity as unchanged and clean.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$oEntity</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="registerRemoved" id="_registerRemoved">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_registerRemoved">#</a>
+		<code><a href="source-class-MiniOrm.UnitOfWork.html#89-99" title="Go to source code">registerRemoved</a>( <span>object <var>$oEntity</var></span> )</code>
+
+		<div class="description short">
+			<p>Mark an entity for deletion for the database.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Mark an entity for deletion for the database.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$oEntity</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRegistry" id="_getRegistry">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRegistry">#</a>
+		<code><a href="source-class-MiniOrm.UnitOfWork.html#101-110" title="Go to source code">getRegistry</a>( )</code>
+
+		<div class="description short">
+			<p>Returns unit of work object registry array.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns unit of work object registry array.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clear" id="_clear">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clear">#</a>
+		<code><a href="source-class-MiniOrm.UnitOfWork.html#112-124" title="Go to source code">clear</a>( )</code>
+
+		<div class="description short">
+			<p>Clear the unit of work domain object registry.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Clear the unit of work domain object registry.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="count" id="_count">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_count">#</a>
+		<code><a href="source-class-MiniOrm.UnitOfWork.html#126-140" title="Go to source code">count</a>( )</code>
+
+		<div class="description short">
+			<p>Returns the totla number of objects held in the unit of work.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the totla number of objects held in the unit of work.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code>Countable::count()</code></div>
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+	<table class="summary used">
+	<caption>Methods used from <a href="class-MiniOrm.ObjectRegistry.html#methods">MiniOrm\ObjectRegistry</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-MiniOrm.ObjectRegistry.html#_getInstance">getInstance()</a>, 
+			<a href="class-MiniOrm.ObjectRegistry.html#_newInstance">newInstance()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+	<table class="summary constants" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="ENTITY_NEW" id="ENTITY_NEW">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-MiniOrm.UnitOfWork.html#18-21" title="Go to source code"><b>ENTITY_NEW</b></a>
+			</code>
+
+			<div class="description short">
+				<p>Array key for the new entity array.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Array key for the new entity array.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#ENTITY_NEW" class="anchor">#</a>
+				<code><span class="php-quote">&quot;ENTITY_NEW &quot;</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="ENTITY_CLEAN" id="ENTITY_CLEAN">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-MiniOrm.UnitOfWork.html#23-26" title="Go to source code"><b>ENTITY_CLEAN</b></a>
+			</code>
+
+			<div class="description short">
+				<p>Array key for the clean entity array.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Array key for the clean entity array.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#ENTITY_CLEAN" class="anchor">#</a>
+				<code><span class="php-quote">&quot;ENTITY_CLEAN&quot;</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="ENTITY_DIRTY" id="ENTITY_DIRTY">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-MiniOrm.UnitOfWork.html#28-31" title="Go to source code"><b>ENTITY_DIRTY</b></a>
+			</code>
+
+			<div class="description short">
+				<p>Array key for the dirty entity array.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Array key for the dirty entity array.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#ENTITY_DIRTY" class="anchor">#</a>
+				<code><span class="php-quote">&quot;ENTITY_DIRTY&quot;</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="ENTITY_REMOVED" id="ENTITY_REMOVED">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-MiniOrm.UnitOfWork.html#33-36" title="Go to source code"><b>ENTITY_REMOVED</b></a>
+			</code>
+
+			<div class="description short">
+				<p>Array key for the remove entity array.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Array key for the remove entity array.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#ENTITY_REMOVED" class="anchor">#</a>
+				<code><span class="php-quote">&quot;ENTITY_REMOVED&quot;</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

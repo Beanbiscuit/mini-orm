@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class MiniOrm\EntityManager</title>
+
+	<link rel="stylesheet" href="resources/style.css?95ada9fb523b6ab4fd1c47bb375f713f2cc65542">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li class="active">
+					<a href="namespace-MiniOrm.html">
+						MiniOrm<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-MiniOrm.Driver.html">
+						Driver					</a>
+
+						</li>
+				<li>
+					<a href="namespace-MiniOrm.Entity.html">
+						Entity					</a>
+
+						</li>
+				<li>
+					<a href="namespace-MiniOrm.Logging.html">
+						Logging					</a>
+
+						</li>
+				<li>
+					<a href="namespace-MiniOrm.Mapping.html">
+						Mapping					</a>
+
+						</li>
+				<li>
+					<a href="namespace-MiniOrm.Prepare.html">
+						Prepare					</a>
+
+						</li>
+				<li>
+					<a href="namespace-MiniOrm.Query.html">
+						Query					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-MiniOrm.Configuration.html">Configuration</a></li>
+				<li><a href="class-MiniOrm.DbalManager.html">DbalManager</a></li>
+				<li><a href="class-MiniOrm.DriverFactory.html">DriverFactory</a></li>
+				<li class="active"><a href="class-MiniOrm.EntityManager.html">EntityManager</a></li>
+				<li><a href="class-MiniOrm.OrmManager.html">OrmManager</a></li>
+				<li><a href="class-MiniOrm.UnitOfWork.html">UnitOfWork</a></li>
+			</ul>
+
+
+			<h3>Traits</h3>
+			<ul>
+				<li><a href="class-MiniOrm.ObjectRegistry.html">ObjectRegistry</a></li>
+			</ul>
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-MiniOrm.DbalException.html">DbalException</a></li>
+				<li><a href="class-MiniOrm.OrmException.html">OrmException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-MiniOrm.html" title="Summary of MiniOrm"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class EntityManager</h1>
+
+
+	<div class="description">
+	<p>The mini ORM entity manager class.</p>
+
+<p>Use the entity manager to persist and return entites from the database.</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b><span>MiniOrm\EntityManager</span></b>			
+			
+			 uses 
+					<a href="class-MiniOrm.Logging.PackageLogger.html"><span>MiniOrm\Logging\PackageLogger</span></a>
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-MiniOrm.html">MiniOrm</a><br>
+		
+
+				<b>Author:</b>
+				Bruce Silver <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#98;&#x72;&#117;&#99;&#x65;&#46;&#115;&#x69;&#108;v&#x65;&#114;&#x40;&#x74;&#97;&#x6e;&#x64;&#102;&#x2e;&#99;&#111;&#x2e;&#117;&#107;">&#98;&#x72;&#117;&#99;&#x65;&#46;&#115;&#x69;&#108;v&#x65;&#114;&#x40;&#x74;&#97;&#x6e;&#x64;&#102;&#x2e;&#99;&#111;&#x2e;&#117;&#107;</a><br>
+			<b>Located at</b> <a href="source-class-MiniOrm.EntityManager.html#12-353" title="Go to source code">EntityManager.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-MiniOrm.EntityManager.html#57-73" title="Go to source code">__construct</a>( <span><code><a href="class-MiniOrm.DbalManager.html">MiniOrm\DbalManager</a></code> <var>$oDbalManager</var></span>, <span><code><a href="class-MiniOrm.Mapping.EntityMapping.html">MiniOrm\Mapping\EntityMapping</a></code> <var>$oMapper</var></span>, <span><code><a href="class-MiniOrm.UnitOfWork.html">MiniOrm\UnitOfWork</a></code> <var>$oUnitOfWork</var></span>, <span><code><a href="class-MiniOrm.Prepare.PrepareStatement.html">MiniOrm\Prepare\PrepareStatement</a></code> <var>$oPrepare</var></span> )</code>
+
+		<div class="description short">
+			<p>Construct the entity manager.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Construct the entity manager.</p>
+
+<p>Provide the the dbal object and mapping object.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$oDbalManager</var></dt>
+					<dd></dd>
+					<dt><var>$oMapper</var></dt>
+					<dd></dd>
+					<dt><var>$oUnitOfWork</var></dt>
+					<dd></dd>
+					<dt><var>$oPrepare</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="persist" id="_persist">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_persist">#</a>
+		<code><a href="source-class-MiniOrm.EntityManager.html#75-85" title="Go to source code">persist</a>( <span>object <var>$oEntity</var></span> )</code>
+
+		<div class="description short">
+			<p>This method will insert the provided entity into the database.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This method will insert the provided entity into the database.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$oEntity</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="update" id="_update">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_update">#</a>
+		<code><a href="source-class-MiniOrm.EntityManager.html#87-96" title="Go to source code">update</a>( <span>object <var>$oEntity</var></span> )</code>
+
+		<div class="description short">
+			<p>This method will update the provided entity into the database.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This method will update the provided entity into the database.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$oEntity</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="delete" id="_delete">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_delete">#</a>
+		<code><a href="source-class-MiniOrm.EntityManager.html#98-107" title="Go to source code">delete</a>( <span>object <var>$oEntity</var></span> )</code>
+
+		<div class="description short">
+			<p>This method will delete the provided entity into the database.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This method will delete the provided entity into the database.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$oEntity</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="query" id="_query">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_query">#</a>
+		<code><a href="source-class-MiniOrm.EntityManager.html#109-119" title="Go to source code">query</a>( <span>MiniOrm\Query <var>$oQuery</var></span> )</code>
+
+		<div class="description short">
+			<p>Provide a query object to the method in order to perform an SQL SELECT query.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Provide a query object to the method in order to perform an SQL SELECT query.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$oQuery</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+				<h4>Tpdo</h4>
+				<div class="list">
+						Implement this method.<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="find" id="_find">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_find">#</a>
+		<code><a href="source-class-MiniOrm.EntityManager.html#121-157" title="Go to source code">find</a>( <span>string <var>$sEntityName</var></span>, <span>mixed <var>$mId</var></span> )</code>
+
+		<div class="description short">
+			<p>Fetch a single instance of the provided entity from the database.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Fetch a single instance of the provided entity from the database.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sEntityName</var></dt>
+					<dd><ul>
+<li>The class name of the requested</li>
+</ul></dd>
+					<dt><var>$mId</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-MiniOrm.OrmException.html">MiniOrm\OrmException</a></code>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findAll" id="_findAll">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_findAll">#</a>
+		<code><a href="source-class-MiniOrm.EntityManager.html#159-189" title="Go to source code">findAll</a>( <span>stirng <var>$sEntityName</var></span> )</code>
+
+		<div class="description short">
+			<p>Performs a find all SQL query for the provided entity.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Performs a find all SQL query for the provided entity.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sEntityName</var></dt>
+					<dd>The class name of an entity.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br><ul>
+<li>An array of enities returned from the find all query.  Returns an empty array if no records are found.</li>
+</ul>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-MiniOrm.OrmException.html">MiniOrm\OrmException</a></code>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="flush" id="_flush">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_flush">#</a>
+		<code><a href="source-class-MiniOrm.EntityManager.html#214-235" title="Go to source code">flush</a>( )</code>
+
+		<div class="description short">
+			<p>Flush will synchronise all entities in the unit of work with the database.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Flush will synchronise all entities in the unit of work with the database.</p>
+
+<p>Unit of work is cleared after the flush.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLastInsertId" id="_getLastInsertId">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLastInsertId">#</a>
+		<code><a href="source-class-MiniOrm.EntityManager.html#333-341" title="Go to source code">getLastInsertId</a>( )</code>
+
+		<div class="description short">
+			<p>Returns the primary id value for the last entity that was successfully peristed to the data layer.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the primary id value for the last entity that was successfully peristed to the data layer.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDbalManager" id="_getDbalManager">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-MiniOrm.DbalManager.html">MiniOrm\DbalManager</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDbalManager">#</a>
+		<code><a href="source-class-MiniOrm.EntityManager.html#343-351" title="Go to source code">getDbalManager</a>( )</code>
+
+		<div class="description short">
+			<p>Returns an instance of the database abstraction layer manager.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns an instance of the database abstraction layer manager.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-MiniOrm.DbalManager.html">MiniOrm\DbalManager</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+	<table class="summary used">
+	<caption>Methods used from <a href="class-MiniOrm.Logging.PackageLogger.html#methods">MiniOrm\Logging\PackageLogger</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-MiniOrm.Logging.PackageLogger.html#_enableLogging">enableLogging()</a>, 
+			<a href="class-MiniOrm.Logging.PackageLogger.html#_log">log()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>
