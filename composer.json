@@ -1,15 +1,14 @@
 {
-    "name": "bsilver/mini_orm",
+    "name": "beanbiscuit/mini_orm",
     "description": "Very lightweight object relational mapper and database abstraction layer for PHP.  Limited functionality.  Sample code for job applications",
     "license": "BSD-3-Clause",
     "autoload": {
         "psr-4": {
-            "MiniOrm\\": "main/src/MiniOrm",
-            "MiniOrmTest\\": "main/test/MiniOrmTest"
+            "MiniOrm\\": "main/src/MiniOrm"
         }
     },
     "require": {
-        "php": ">=5.5",
-        "phpunit/phpunit": "4.7.6"
+        "php": ">=7.0",
+        "phpunit/phpunit": "6.2.X"
     }
 }

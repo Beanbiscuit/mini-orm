@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit colors="true"
+         bootstrap="../../vendor/autoload.php"
+         stopOnFailure="false" 
+         stopOnError="false"
+         backupGlobals = "false"
+         processIsolation = "false"
+         convertErrorsToException = "false"
+         convertWarningsToException = "false"
+         convertNoticesToException = "false"
+         syntaxCheck = "false">
+    
+    <logging>
+        <log type="coverage.html" target="/tmp/report.html" charset="UTF-8" yui="true" highlight="true" lowUpperBound="50" highLowerBound = "80"/>
+        <log type="testdox-html" target="/tmp/testdox.html"/>
+    </logging>
+</phpunit>
