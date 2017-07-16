@@ -4,11 +4,10 @@ return array(
     //Database connection settings, can be developed further to include multiple data sources.
     'connection' => array(
         'driver' => 'MySql',
-        'hostname' => '192.168.186.128',
-        //'hostname' => 'localhost',
-        'username' => 'admin',
-        'password' => 'admin',
-        'database' => 'my_helpdesk'
+        'hostname' => '',
+        'username' => '',
+        'password' => '',
+        'database' => ''
     ),
     //General ORM settings, logging etc.
     'orm' => array(
